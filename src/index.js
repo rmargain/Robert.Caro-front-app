@@ -5,8 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
-import "uikit/dist/css/uikit.min.css"
-import { BrowserRouter } from "react-router-dom"
+import "uikit/dist/css/uikit.min.css";
+import { BrowserRouter } from "react-router-dom";
 
 
 UIkit.use(Icons)
@@ -18,7 +18,7 @@ const WithRouter = ()=>(
 )
 ReactDOM.render(
     <WithRouter/>,
-  document.getElementById('root')
+  document.getElementById ('root')
 );
 
 reportWebVitals();

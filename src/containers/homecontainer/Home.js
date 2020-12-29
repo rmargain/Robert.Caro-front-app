@@ -3,11 +3,11 @@ import React from "react";
 export default class Home extends Component{
     render(){
         return(
-            <sectiom>
+            <section>
                 <div>
                     
                 </div>
-            </sectiom>
+            </section>
         )
     }
 }

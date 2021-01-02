@@ -11,7 +11,6 @@ const Navbar = ({ user, logout }) => {
               <li className="uk-active">
                 <Link to="/">Ironmarket</Link>
               </li>
-
               <li>
                 <Link to="/producto/new">Nuevo producto</Link>
               </li>

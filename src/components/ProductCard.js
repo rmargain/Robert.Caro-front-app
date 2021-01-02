@@ -1,10 +1,7 @@
 import React from "react";
 import Slider from "./Slider";
-import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
 import { Link } from "react-router-dom";
-import "dayjs/locale/es";
-dayjs.extend(relativeTime);
+
 
 const ProductCard = ({
   _id,
@@ -41,7 +38,7 @@ const ProductCard = ({
               {isOwner ? (
                 <div>
                   <Link
-                    to={`/property/${_id}`}
+                    to={`/product/${_id}`}
                     className="uk-button uk-button-text"
                   >
                     Editar
@@ -57,7 +54,7 @@ const ProductCard = ({
         <div className="uk-card-body uk-padding-small">
           <h3 className="uk-card-title uk-text-center">
             <Link
-              to={`/property/${_id}`}
+              to={`/product/${_id}`}
               className="uk-button uk-button-text uk-text-lead"
             >
               {title}
@@ -68,10 +65,10 @@ const ProductCard = ({
           <div className="uk-text-center">
             {!isDemo ? (
               <Link
-                to={`/reservate/${_id}`}
+                to={`/cart/${_id}`}
                 className="uk-button uk-button-primary"
               >
-                Comprar
+                Agregar
               </Link>
             ) : null}
           </div>

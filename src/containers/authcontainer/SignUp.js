@@ -31,7 +31,6 @@ export default class SignupContainer extends Component {
             this.setState({ data:{}})
             console.log("Registro exitoso",response)
             history.push("/login")
-
         }).catch((error)=>{
             console.log("hay un error",error.response)
         })

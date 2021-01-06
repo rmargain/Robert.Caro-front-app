@@ -1,7 +1,5 @@
 import {_axios} from "./api";
 
-
-
 export const getProducts = () => {
   return _axios.get(`/product`);
 };
@@ -24,4 +22,4 @@ export const updateProduct = (params) => {
 
 
 export const deleteProduct = (id) => {
-    return _axios.delete(`/product/${id}`);
+    return _axios.delete(`/product/${id}`)};

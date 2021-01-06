@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { login } from "../../services/userWs";
 import { Link } from 'react-router-dom';
 import AppContext from '../../Appcontext';
+import Navbar from "../../components/Navbar";
 
 export default class AuthContainer extends Component {
     static contextType = AppContext;
@@ -42,6 +43,7 @@ export default class AuthContainer extends Component {
 
         return(
             <section className="uk-section">
+            <Navbar/>
             <div className="uk-container uk-flex uk-flex-center">
                 <div className="uk-width-1-4">
                     <h3>Inicia sesión</h3>

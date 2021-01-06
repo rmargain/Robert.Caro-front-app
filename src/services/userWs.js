@@ -1,7 +1,5 @@
 import { _axios } from './api';
 
-
-
 export const login = (data)=>{
 
     return _axios.post("/user/login",data)

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { signup } from "../../services/userWs";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import Navbar from "../../components/Navbar";
 
 
 export default class SignupContainer extends Component {
@@ -42,6 +43,7 @@ export default class SignupContainer extends Component {
         const {data} = this.state;
         return(
             <section className="uk-section">
+            <Navbar/>
                 <div className="uk-container uk-flex uk-flex-center">
                     <div className="uk-width-1-4">
                         <h3>Registrate </h3>

@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 const Navbar = ({ user, logout }) => {
   return (
     <header>
-      <nav className="uk-navbar-container" uk-navbar="true">
+      {/* <nav className="uk-navbar-container" uk-navbar="true">
         {user._id ? (
           <div className="uk-navbar-left">
             <ul className="uk-navbar-nav">
@@ -50,7 +50,7 @@ const Navbar = ({ user, logout }) => {
             )}
           </ul>
         </div>
-      </nav>
+      </nav> */}
     </header>
   );
 };

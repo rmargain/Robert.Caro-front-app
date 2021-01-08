@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { deleteProduct, getProductsByUser } from '../../services/productWs';
-import { deleteProduct, getUserCart } from '../../services/cartWs';
+import { deleteCart, getUserCart } from '../../services/cartWs';
 import AppContext from '../../AppContext';
 import {normalizeData,denormalizeData,filterItem} from "../../utils/dataUtils";
 

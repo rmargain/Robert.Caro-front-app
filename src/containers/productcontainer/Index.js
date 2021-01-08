@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import AppContext from '../../AppContext';
 import { ProductCard } from "../../components"
-import { createProduct, getProductDetail, updateProduct } from "../../services/ProductWs";
+import { createProduct, getProductsDetail, updateProduct } from "../../services/ProductWs";
 import { buildNotification } from "../../utils/notification";
 import Form from './Form'
 
@@ -27,7 +27,7 @@ export default class ProductContainer extends Component {
         const {id} = this.props.match.params;
         //petición backend
         if(id){
-            getProductDetail(id).then(res =>{
+            getProductsDetail(id).then(res =>{
                 const {result} = res.data
                 this.setState({product: result})
             })

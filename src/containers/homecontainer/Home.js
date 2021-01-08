@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import HomeSlider from "../../components/HomeSlider";
 
 
 export default class Home extends Component{
@@ -6,7 +7,8 @@ export default class Home extends Component{
         return(
             <section>
             <div>
-                </div>
+            <HomeSlider/>
+            </div>
             </section>
         )
     }

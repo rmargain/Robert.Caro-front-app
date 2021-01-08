@@ -83,3 +83,5 @@ class App extends Component {
 }
 
 const AppWithRouter = withRouter (App)
+
+export default AppWithRouter;

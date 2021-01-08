@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { login } from "../../services/userWs";
 import { Link } from 'react-router-dom';
-import AppContext from '../../Appcontext';
+import AppContext from '../../AppContext';
 
 export default class AuthContainer extends Component {
     static contextType = AppContext;

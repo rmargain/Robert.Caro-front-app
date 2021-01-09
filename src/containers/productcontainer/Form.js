@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { InputField, TextField } from "../../components/Index";
+=======
+import { InputField, TextField } from "../../components/";
+>>>>>>> 6f6133484c50b7a0208496f75701a5b9c5e304c2
 
 
 const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
@@ -32,8 +36,10 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
             handleChange={handleImagesChange}
             hint="separar imágenes por comas"
           />
-          <button type="submit" className="uk-button uk-button-primary">
-            Crear producto
+          <button 
+          onClick= {handleSubmit}
+          type="submit" className="uk-button uk-button-primary">
+          Crear producto
           </button>
         </form>
       </div>

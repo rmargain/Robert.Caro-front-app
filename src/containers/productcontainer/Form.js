@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputField, TextAreaField } from "../../components";
+import { InputField, TextField } from "../../components";
 
 
 const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
@@ -20,13 +20,13 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
             placeholder="precio"
             handleChange={handleChange}
           />
-          <TextAreaField
+          <TextField
             name="description"
             value={product.description}
             hint={`${descriptionLength}/50`}
             handleChange={handleChange}
           />
-          <TextAreaField
+          <TextField
             name="images"
             value={product.images?.join(",")}
             handleChange={handleImagesChange}

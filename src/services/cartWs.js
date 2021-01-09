@@ -5,7 +5,7 @@ export const getUserCart = () => {
   return _axios.get(`/cart`);
 };
 
-export const createCarts = (cart) => {
+export const createCart = (cart) => {
   return _axios.post(`/cart`, cart);
 };
 

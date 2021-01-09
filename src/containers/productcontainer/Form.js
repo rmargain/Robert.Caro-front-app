@@ -2,6 +2,7 @@ import React from 'react';
 import { InputField, TextField } from "../../components/";
 
 
+
 const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
     const descriptionLength =
       (product.description && product.description.length) || 0;

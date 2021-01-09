@@ -12,8 +12,8 @@ export const getProductsDetail = (id) => {
   return _axios.get(`/product/${id}`);
 };
 
-export const createProduct = (params) => {
-  return _axios.post(`/product`, params.product);
+export const createProduct = (_id) => {
+  return _axios.post(`/product/store/${_id}`, params.product);
 };
 
 export const updateProduct = (params) => {

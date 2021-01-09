@@ -7,7 +7,7 @@ export default class Home extends Component{
         return(
             <section>
             <div>
-            <HomeSlider/>
+            {/* <HomeSlider/> */}
             </div>
             </section>
         )

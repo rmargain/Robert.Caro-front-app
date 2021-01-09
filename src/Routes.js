@@ -3,9 +3,9 @@ import {Switch, Route} from "react-router-dom";
 import AuthContainer from "./containers/authcontainer/Auth";
 import SignupContainer from "./containers/authcontainer/SignUp";
 import HomeContainer from "./containers/homecontainer/Home";
-import ProductContainer from "./containers/productcontainer/index";
-import UserProfile from "./containers/userprofile";
-
+import ProductContainer from "./containers/productcontainer/Index";
+import UserProfile from "./containers/userprofile/Index";
+import StoreContainer from "./containers/storecontainer/Index"
 
 
 //Mis vistas --> Containers
@@ -18,6 +18,7 @@ const Routes = () => (
         <Route exact path="/product/new"  component={ProductContainer}   />
         <Route exact path="/product/:id"  component={ProductContainer}   />
         <Route exact path="/profile"  component={UserProfile}   />
+        <Route exact path="/store/new" component={StoreContainer} />
     </Switch>
 );
 

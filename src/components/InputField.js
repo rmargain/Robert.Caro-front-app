@@ -2,7 +2,7 @@ import React from "react";
 
 const InputField = ({
   name,
-  type = "text",
+  type,
   handleChange,
   placeholder,
   value = "",

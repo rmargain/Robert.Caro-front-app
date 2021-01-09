@@ -46,9 +46,11 @@ class App extends Component {
   }
 
   addProduct = ( product ) =>{
-    let { products} = this.state;
+    let {products} = this.state;
     products = { [product._id] : product, ...product};
   }
+
+ 
   render(){
 
     const{

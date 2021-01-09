@@ -63,8 +63,9 @@ export default class ProductContainer extends Component {
         })
         .catch(error=>{
             //almacenamiento de errores y mensajes
-            const errors = Object.values(error.response.data.error)
-            errors.map((error) => buildNotification(error,"danger","close"))
+            //const errors = Object.values(error.response.data.error)
+            //errors.map((error) => buildNotification(error,"danger","close"))
+            console.log ("error",error.response)
         })
     }
     render(){

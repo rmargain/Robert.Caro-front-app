@@ -25,7 +25,7 @@ class UserProfile extends Component {
             history.push("/login")
             return false
         }
-      if (denormalizeData(userProducts).length < 1) {
+      /*if (denormalizeData(userProducts).length < 1) {
         const { setUserProducts, setUserCart } = this.context;
         getProductsByUser(_id).then((res) => {
           const { result } = res.data;
@@ -38,7 +38,7 @@ class UserProfile extends Component {
           const cart = normalizeData(result);
           setUserCart(cart);
         });
-      }
+      }*/
     }
   
     removeProduct = (id) => {
@@ -107,7 +107,7 @@ class UserProfile extends Component {
                     className="uk-switcher uk-margin uk-height-large"
                     uk-overflow-auto="true"
                   >
-                    <li className="">
+                   {/* <li className="">
                       {denormalizeData(userProducts).map((product, index) => (
                         <SimpleCard
                           key={index}
@@ -127,7 +127,7 @@ class UserProfile extends Component {
                           />
                         )
                       ) : null}
-                    </li>
+                    </li>*/}
                   </ul>
                 </div>
               </div>

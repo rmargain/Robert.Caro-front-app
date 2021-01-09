@@ -147,9 +147,8 @@ export default class SignupContainer extends Component {
                                     Ingresa
                                 </Link>
                             </div>
-                            
 
-                            <button onClick={() => this.onSubmit()} className="uk-button uk-button-primary">
+                            <button type="submit" className="uk-button uk-button-primary">
                                 Registrate
                             </button>
                         </form>

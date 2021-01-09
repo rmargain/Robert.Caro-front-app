@@ -35,7 +35,7 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
           <button 
           onClick= {handleSubmit}
           type="submit" className="uk-button uk-button-primary">
-            Crear producto
+          Crear producto
           </button>
         </form>
       </div>

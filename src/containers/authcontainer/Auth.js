@@ -83,7 +83,8 @@ export default class AuthContainer extends Component {
                         </Link>
                     </div>
                     <div className="uk-margin-small">
-                    <button className="uk-button uk-button-danger">
+                    <button 
+                    className="uk-button uk-button-danger">
                         Entrar
                     </button>
                     </div>

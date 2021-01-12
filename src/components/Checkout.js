@@ -1,6 +1,6 @@
 import React from "react";
 
-const Confirmation = ({ id, message, handleClick }) => {
+const Checkout = ({ id, message, handleClick }) => {
   return (
     <div id={`remove-${id}`} uk-modal="true">
       <div className="uk-modal-dialog uk-modal-body">
@@ -25,4 +25,4 @@ const Confirmation = ({ id, message, handleClick }) => {
   );
 };
 
-export default Confirmation;
+export default Checkout;

@@ -4,7 +4,7 @@ import AuthContainer from "./containers/authcontainer/Auth";
 import SignupContainer from "./containers/authcontainer/SignUp";
 import HomeContainer from "./containers/homecontainer/Home";
 import ProductContainer from "./containers/productcontainer/index";
-import UserProfile from "./containers/userprofile/index";
+import UserProfile from "./containers/userprofile/Index";
 import StoreContainer from "./containers/storecontainer/index"
 import StoreProfile from "./containers/storecontainer/Profile";
 

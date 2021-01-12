@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
 import "uikit/dist/css/uikit.min.css";
+import './theme/design.scss';
 import { BrowserRouter } from "react-router-dom";
 
 

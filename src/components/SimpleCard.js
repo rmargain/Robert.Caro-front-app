@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "./Slider";
-import Confirmation from "./Confirmation";
+import Confirmation from "./Checkout";
 import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import CartModal from "./CartModal";

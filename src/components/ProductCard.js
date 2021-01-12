@@ -1,8 +1,6 @@
 import React from "react";
 import Slider from "./Slider";
 import { Link } from "react-router-dom";
-
-
 const ProductCard = ({
   _id,
   images = [],
@@ -12,7 +10,7 @@ const ProductCard = ({
   _owner,
   userId,
 }) => {
-  const isOwner = userId === _owner?._id;
+  const isOwner = userId === _owner;
   return (
     <div className="uk-margin-small-bottom">
       <div className="uk-card uk-card-default">
@@ -41,7 +39,6 @@ const ProductCard = ({
                     Editar
                   </Link>
                 </div>
-              
             </div>
           </div>
         <div className="uk-card-media-top">
@@ -64,7 +61,7 @@ const ProductCard = ({
                 to={`/cart`}
                 className="uk-button uk-button-primary"
               >
-                Editar
+                Agregar
               </Link>
             ) : null}
           </div>
@@ -73,5 +70,4 @@ const ProductCard = ({
     </div>
   );
 };
-
 export default ProductCard;

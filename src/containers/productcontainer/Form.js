@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { InputField, TextField } from "../../components/Index";
-=======
-import { InputField, TextField } from "../../components/";
->>>>>>> 6f6133484c50b7a0208496f75701a5b9c5e304c2
 
 
 const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
@@ -14,18 +10,21 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
         <form className="uk-width-1-1" onSubmit={handleSubmit}>
           <InputField
             name="title"
+            type="text"
             value={product.title}
             placeholder="Nombre de producto"
             handleChange={handleChange}
           />
           <InputField
             name="price"
+            type="number"
             value={product.price}
             placeholder="precio"
             handleChange={handleChange}
           />
           <TextField
             name="description"
+            type="text"
             value={product.description}
             hint={`${descriptionLength}/50`}
             handleChange={handleChange}
@@ -35,6 +34,13 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
             value={product.images?.join(",")}
             handleChange={handleImagesChange}
             hint="separar imágenes por comas"
+          />
+          <InputField
+            name="inventory"
+            type="number"
+            value={product.inventory}
+            placeholder="inventario"
+            handleChange={handleChange}
           />
           <button 
           onClick= {handleSubmit}

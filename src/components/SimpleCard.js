@@ -13,6 +13,7 @@ const SimpleCard = ({
   inventory,
   deleteItem,
   isCart,
+  user,
   _product,
 }) => (
   <div className="uk-margin-medium-bottom uk-card uk-card-default">
@@ -45,7 +46,7 @@ const SimpleCard = ({
           </div>
         )}
         <div className="uk-flex uk-flex-around">
-          {isReservation ? (
+          {isCart ? (
             <Link
               className="uk-button uk-button-default"
               to={`/cart/${_id}/edit`}

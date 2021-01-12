@@ -65,7 +65,7 @@ const ProductCard = ({
           <div className="uk-text-center">
             {!isDemo ? (
               <Link
-                to={`/cart/${_id}`}
+                to={`/cart`}
                 className="uk-button uk-button-primary"
               >
                 Agregar

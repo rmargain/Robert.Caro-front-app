@@ -3,10 +3,11 @@ import {Switch, Route} from "react-router-dom";
 import AuthContainer from "./containers/authcontainer/Auth";
 import SignupContainer from "./containers/authcontainer/SignUp";
 import HomeContainer from "./containers/homecontainer/Home";
-import ProductContainer from "./containers/productcontainer/index";
+import ProductContainer from "./containers/productcontainer/Index";
 import UserProfile from "./containers/userprofile/Index";
 import StoreContainer from "./containers/storecontainer/index"
 import StoreProfile from "./containers/storecontainer/Profile";
+import AllProducts from "./containers/productcontainer/AllProducts"
 
 
 //Mis vistas --> Containers
@@ -21,6 +22,8 @@ const Routes = () => (
         <Route exact path="/profile"  component={UserProfile}   />
         <Route exact path="/store/new" component={StoreContainer} />
         <Route exact path='/store/profile' component={StoreProfile}/>
+        <Route exact path='/product/delete' component={ProductContainer}/>
+        <Route exact path='/allproducts' component={AllProducts}/>
     </Switch>
 );
 

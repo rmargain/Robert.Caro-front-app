@@ -10,7 +10,9 @@ const ProductCard = ({
   _owner,
   userId,
 }) => {
-  const isOwner = userId === _owner;
+
+  const isOwner = userId === _owner?._id;
+  console.log(_owner)
   return (
     <div className="uk-margin-small-bottom">
       <div className="uk-card uk-card-default">

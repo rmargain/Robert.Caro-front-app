@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputField, TextField } from "../../components/index";
+import { InputField, TextField } from "../../components/Index";
 
 
 

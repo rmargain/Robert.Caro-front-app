@@ -11,13 +11,11 @@ const ProductCard = ({
   price,
   _owner,
   userId,
-  isDemo = false,
 }) => {
   const isOwner = userId === _owner?._id;
   return (
     <div className="uk-margin-small-bottom">
       <div className="uk-card uk-card-default">
-        {!isDemo ? (
           <div className="uk-card-header uk-padding-small">
             <div className="uk-grid-small uk-flex-middle" uk-grid="true">
               <div className="uk-width-auto">
@@ -35,7 +33,6 @@ const ProductCard = ({
                 </h3>
                 <p className="uk-text-meta uk-margin-remove-top">Vendedor</p>
               </div>
-              {isOwner ? (
                 <div>
                   <Link
                     to={`/product/${_id}`}
@@ -44,10 +41,9 @@ const ProductCard = ({
                     Editar
                   </Link>
                 </div>
-              ) : null}
+              
             </div>
           </div>
-        ) : null}
         <div className="uk-card-media-top">
           <Slider images={images} />
         </div>
@@ -63,12 +59,12 @@ const ProductCard = ({
           <div>Precio: {price}</div>
           <p className="uk-text-break">{description}</p>
           <div className="uk-text-center">
-            {!isDemo ? (
+            {!isOwner ? (
               <Link
                 to={`/cart`}
                 className="uk-button uk-button-primary"
               >
-                Agregar
+                Editar
               </Link>
             ) : null}
           </div>

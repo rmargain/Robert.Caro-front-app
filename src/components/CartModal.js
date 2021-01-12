@@ -46,7 +46,7 @@ class CartModal extends Component {
               name="guest_number"
               type="number"
               min="1"
-              value={cart.guest_number}
+              value={cart._user}
               handleChange={handleChange}
               placeholder="Guest number"
             />

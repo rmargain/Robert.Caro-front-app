@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import AppContext from "../../AppContext";
-import { ProductCard } from "../../components/Index";
+import { ProductCard } from "../../components";
 import { getProducts, getProductsByUser } from "../../services/productWs";
 import { denormalizeData, normalizeData } from "../../utils/dataUtils";
 

@@ -10,6 +10,7 @@ const ProductCard = ({
   _owner,
   userId,
 }) => {
+
   const isOwner = userId === _owner?._id;
   console.log(_owner)
   return (

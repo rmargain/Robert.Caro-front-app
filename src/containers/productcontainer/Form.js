@@ -10,37 +10,37 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
       <div>
         <form className="uk-width-1-1" onSubmit={handleSubmit}>
           <InputField
-            name="title"
+            name="Nombre de producto"
             type="text"
             value={product.title}
             placeholder="Nombre de producto"
             handleChange={handleChange}
           />
           <InputField
-            name="price"
+            name="Precio"
             type="number"
             value={product.price}
-            placeholder="precio"
+            placeholder="Precio"
             handleChange={handleChange}
           />
           <TextField
-            name="description"
+            name="Descripción"
             type="text"
             value={product.description}
             hint={`${descriptionLength}/50`}
             handleChange={handleChange}
           />
           <TextField
-            name="images"
+            name="Imágenes"
             value={product.images?.join(",")}
             handleChange={handleImagesChange}
-            hint="separar imágenes por comas"
+            hint="Separar imágenes por comas"
           />
           <InputField
-            name="inventory"
+            name="Inventario"
             type="number"
             value={product.inventory}
-            placeholder="inventario"
+            placeholder="Inventario"
             handleChange={handleChange}
           />
           <button 

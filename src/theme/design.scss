@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+// Font
+$global-font-family: 'Poppins', sans-serif;
+
+$global-font-size: 16px !default;
+$global-line-height: 1.4 !default;
+$global-xxlarge-font-size: 2.625rem !default; // 42px
+$global-xlarge-font-size: 2rem !default; // 32px
+$global-large-font-size: 1.5rem !default; // 24px
+$global-medium-font-size: 1 rem !default; // 20px
+$global-xmedium-font-size: 1.0rem; // 20px
+$global-small-font-size: 0.75rem !default; //
+
+//button
+.uk-button {
+    padding: 0.1rem 4rem;
+    border-radius: 8px;
+    font-weight: 500;
+    color: black;
+    background-color:rgb(255,206,0);
+    text-transform: none;
+    max-width: 300px;
+}
+
+//Navbar
+
+.uk-navbar-nav li a {
+    font-size: $global-small-font-size;
+    font-family: "Poppins";
+}
+
+.uk-navbar-left ul li a {
+    font-size: $global-xmedium-font-size;
+    font-family: "Poppins";
+}
+
+//Card
+.uk-card {
+    border-radius: 20px;
+    overflow: hidden;
+    font-family: "Poppins";
+    font-size: $global-small-font-size;
+}
+
+//Generales
+h1 {
+    font-family: "Poppins";
+}
+
+p {
+    font-family: "Poppins";
+}
+
+div {
+    font-family: "Poppins";
+    font-size: $global-small-font-size;
+}
+
+button {
+    font-family: "Poppins";
+}

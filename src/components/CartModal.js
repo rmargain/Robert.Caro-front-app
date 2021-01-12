@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+/*import React, { Component } from "react";
 import InputField from "./InputField";
 import { createCart } from "../services/cartWs";
 import { buildNotification } from "../utils/notification";
@@ -8,22 +8,22 @@ import UIkit from "uikit";
 class CartModal extends Component {
   static contextType = AppContext;
   state = {
-    cart: {},
+    products: {},
   };
 
   handleChange = (e) => {
-    let { cart } = this.state; // Valores
-    cart = { ...cart, [e.target.name]: e.target.value };
-    this.setState({ cart });
+    let {products} = this.state; // Valores
+   products = { ...products, [e.target.name]: e.target.value };
+    this.setState({products});
   };
 
   handleSubmit = () => {
-    const { cart } = this.state;
-    const { product } = this.props;
-    createCart({ ...cart, product })
+    const {cart} = this.state;
+    const { products } = this.props;
+    createCart({ ...products, products }) // Crear orden Roberto
       .then(() => {
-        buildNotification("Cart confirmed!", "success");
-        UIkit.modal(`#reservate-${product}`).hide();
+        buildNotification("Orden confirmada!", "Éxito");
+        UIkit.modal(`#reservate-${product}`).hide(); // Alerta ? Dylan
       })
       .catch((err) => {
         console.log(err);
@@ -35,55 +35,16 @@ class CartModal extends Component {
     const { cart } = this.state;
     const {handleChange,handleSubmit} = this
     return (
-      <div
-        id={`reservate-${isEditing ? this.props.cart : product}`}
-        uk-modal="true"
-      >
-        <div className="uk-modal-dialog uk-modal-body">
-          <h2 className="uk-modal-title"> Comprar {title}</h2>
-          <form>
-            <InputField
-              name="guest_number"
-              type="number"
-              min="1"
-              value={cart._user}
-              handleChange={handleChange}
-              placeholder="Guest number"
-            />
-            <InputField
-              name="checkin"
-              handleChange={handleChange}
-              type="date"
-              value={cart.checkin}
-              placeholder="Checkin Date"
-            />
-            <InputField
-              name="checkout"
-              type="date"
-              value={cart.checkout}
-              handleChange={handleChange}
-              placeholder="Checkout Date"
-            />
-          </form>
-          <p className="uk-text-right">
-            <button
-              className="uk-button uk-button-default uk-modal-close"
-              type="button"
+      <div id={`reservate-${isEditing ? this.props.cart : product}`} uk-modal="true">
+        <Link
+              to={`/checkout`}
+              className="uk-button uk-button-default"
             >
-              Cancelar
-            </button>
-            <button
-              onClick={handleSubmit}
-              className="uk-button uk-button-primary"
-              type="button"
-            >
-              Guardar
-            </button>
-          </p>
-        </div>
+         Continuar
+        </Link>
       </div>
     );
   }
 }
 
-export default CartModal;
+export default CartModal;*/

@@ -6,4 +6,3 @@ export {default as Slider} from './Slider'
 export {default as TextField} from './TextField'
 export {default as Cofirmation} from './Confirmation'
 export {default as CartModal} from './CartModal'
-

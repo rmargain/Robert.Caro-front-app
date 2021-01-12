@@ -12,13 +12,15 @@ export default class ProductContainer extends Component {
     static contextType = AppContext;
 
     state = {
-        product:{}
+        product:{},
+        stores:{}
     }
     //Ciclo de vidda
-    componentWillMount(){
+    componentDidMount(){
         //validación de usuario 
         const {state} = this.context
         const {history} = this.props
+            
     
         if (!Object.keys(state.user).length) {
             history.push("/login")
@@ -31,7 +33,7 @@ export default class ProductContainer extends Component {
                 const {result} = res.data
                 this.setState({product: result})
             })
-        }
+        }     
     }
     //Guadar datos
     handleChange = (e) => {
@@ -43,7 +45,6 @@ export default class ProductContainer extends Component {
         let {product} = this.state;
         product = {...product, [e.target.name]:e.target.value.split(",") };
         this.setState({product})
-
     }
 
     handleSubmit = (e)=>{
@@ -68,6 +69,7 @@ export default class ProductContainer extends Component {
             console.log ("error",error.response)
         })
     }
+
     render(){
         const {product} = this.state
         return(

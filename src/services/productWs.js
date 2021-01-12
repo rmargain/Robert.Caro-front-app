@@ -14,11 +14,10 @@ export const getProductsDetail = (id) => {
 
 export const createProduct = (params) => {
   return _axios.post(`/product`, params.product);
-
+  
 export const updateProduct = (params) => {
   return _axios.patch(`/product/${params.id}`, params.product);
 };
-
 
 export const deleteProduct = (id) => {
     return _axios.delete(`/product/${id}`)};

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import AppContext from '../../AppContext';
-import { ProductCard } from "../../components/Index"
+import { ProductCard } from "../../components/index"
 import { createProduct, getProductsDetail, updateProduct } from "../../services/productWs";
 import { buildNotification } from "../../utils/notification";
 import Form from './Form'

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo_principal.png";
+
 const Navbar = ({ user, logout }) => {
   return (
     <header>
@@ -28,6 +29,7 @@ const Navbar = ({ user, logout }) => {
         <form class="uk-search uk-search-default">
         <span uk-search-icon></span>
         <input class="uk-search-input" type="search" placeholder="Buscar producto"/>
+
         </form>
         </div>
 

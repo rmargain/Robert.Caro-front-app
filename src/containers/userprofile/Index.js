@@ -4,7 +4,7 @@ import { deleteCart, getUserCart } from '../../services/cartWs';
 import AppContext from '../../AppContext';
 import {normalizeData,denormalizeData,filterItem} from "../../utils/dataUtils";
 
-import { SimpleCard } from '../../components/Index';
+import { SimpleCard } from '../../components';
 import dayjs from 'dayjs';
 import UIkit from 'uikit';
 import LocalizedFormat from 'dayjs/plugin/localizedFormat';

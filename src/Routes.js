@@ -3,7 +3,7 @@ import {Switch, Route} from "react-router-dom";
 import AuthContainer from "./containers/authcontainer/Auth";
 import SignupContainer from "./containers/authcontainer/SignUp";
 import HomeContainer from "./containers/homecontainer/Home";
-import ProductContainer from "./containers/productcontainer/Index";
+import ProductContainer from "./containers/productcontainer/index";
 import UserProfile from "./containers/userprofile/Index";
 import StoreContainer from "./containers/storecontainer/Index"
 import StoreProfile from "./containers/storecontainer/Profile";

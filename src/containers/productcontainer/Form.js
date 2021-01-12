@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputField, TextField } from "../../components/Index";
+import { InputField, TextField } from "../../components/";
 
 
 const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {

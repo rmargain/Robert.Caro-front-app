@@ -19,6 +19,7 @@ class StoreProfile extends Component{
                     const {result} = res.data  
                     const products = normalizeData(result)
                     console.log(user)
+                    console.log(user._id)
                     setProducts(products)
                 })
             }
@@ -26,6 +27,7 @@ class StoreProfile extends Component{
 
     render(){
         const {products, user} = this.context.state
+        console.log(products)
         return(
             <div className="uk-section">
                 <div className="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" 

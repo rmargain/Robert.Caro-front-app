@@ -76,7 +76,7 @@ class App extends Component {
       }}
       >
       <div className="App">
-       <Navbar user ={this.state.user}/>
+       <Navbar user ={this.state.user} logout={logout}/>
       <Routes/>
       </div>
       </AppContext.Provider>

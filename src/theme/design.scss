@@ -24,6 +24,19 @@ $global-small-font-size: 0.75rem !default; //
     max-width: 300px;
 }
 
+.uk-button:hover {
+    color:rgb(255,206,0);
+    background-color:black;
+    text-transform: none;
+    max-width: 300px;
+}
+
+.uk-button:focus-within {
+    color: black;
+    background-color:rgb(255,206,0);
+}
+
+
 //Navbar
 
 .uk-navbar-nav li a {

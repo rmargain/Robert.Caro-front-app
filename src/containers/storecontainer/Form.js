@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputField, TextField } from "../../components/Index";
+import { InputField, TextField } from "../../components/index";
 
 
 const Form = ({ handleSubmit, handleChange, store }) => {
@@ -7,114 +7,114 @@ const Form = ({ handleSubmit, handleChange, store }) => {
       <div>
         <form className="uk-width-1-1" onSubmit={handleSubmit}>
           <InputField
-            name="store_name"
+            name="Nombre de tienda"
             type="text"
             value={store.store_name}
             placeholder="Nombre de la Tienda"
             onChange={handleChange}
           />
           <TextField
-            name="store_picture"
+            name="Imagen de tu negocio"
             value={store.store_picture}
             onChange={handleChange}
             hint="solo una imagen para la tienda"
           />
           <InputField
-            name="street"
+            name="Calle"
             type="text"
             value={store.street}
-            placeholder="calle"
+            placeholder="Calle"
             onChange={handleChange}
           />
           <InputField
-            name="ext_number"
+            name="Número exterior"
             type="text"
             value={store.ext_number}
-            placeholder="número exterior"
+            placeholder="Número exterior"
             onChange={handleChange}
           />
           <InputField
-            name="int_number"
+            name="Número interior"
             type="text"
             value={store.int_number}
-            placeholder="número interior"
+            placeholder="Número interior"
             onChange={handleChange}
           />
           <InputField
-            name="neighborhood"
+            name="Colonia"
             type="text"
             value={store.neighborhood}
-            placeholder="colonia o asentamiento"
+            placeholder="Colonia o asentamiento"
             onChange={handleChange}
           />
           <InputField
-            name="municipality"
+            name="Municipio"
             type="text"
             value={store.municipality}
-            placeholder="municipio"
+            placeholder="Municipio"
             onChange={handleChange}
           />
           <InputField
-            name="state"
+            name="Estado"
             type="text"
             value={store.state}
-            placeholder="estado"
+            placeholder="Estado"
             onChange={handleChange}
           />
           <InputField
-            name="country"
+            name="País"
             type="text"
             value={store.country}
-            placeholder="país"
+            placeholder="País"
             onChange={handleChange}
           />
           <InputField
-            name="zipcode"
+            name="C.P."
             type="text"
             value={store.zipcode}
-            placeholder="código postal"
+            placeholder="Código postal"
             onChange={handleChange}
           />
           <InputField
-            name="clabe"
+            name="Cuenta Clabe"
             type="number"
             value={store.clabe}
-            placeholder="cuenta clabe"
+            placeholder="Cuenta clabe"
             onChange={handleChange}
           />
           <InputField
-            name="bank"
+            name="Banco"
             type="text"
             value={store.bank}
-            placeholder="banco"
+            placeholder="Banco"
             onChange={handleChange}
           />
           <InputField
-            name="account_holder_name"
+            name="Titular de la cuenta"
             type="text"
             value={store.account_holder_name}
             placeholder="Nombre del titular de la cuenta"
             onChange={handleChange}
           />
           <InputField
-            name="phone"
+            name="Teléfono"
             type="number"
             value={store.phone}
             placeholder="Teléfono"
             onChange={handleChange}
           />
           <InputField
-            name="mobile"
+            name="Celular"
             type="number"
             value={store.mobile}
-            placeholder="celular"
+            placeholder="Celular"
             onChange={handleChange}
           />
           <InputField
-            name="email"
+            name="e-mail"
             type="email"
             value={store.email}
-            placeholder="correo electrónico"
+            placeholder="Correo electrónico"
             onChange={handleChange}
           />
           <button type="submit" className="uk-button uk-button-primary">

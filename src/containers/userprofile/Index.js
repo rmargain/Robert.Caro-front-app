@@ -3,11 +3,10 @@ import { deleteProduct, getProductsByUser } from '../../services/productWs';
 import { deleteCart, getUserCart } from '../../services/cartWs';
 import AppContext from '../../AppContext';
 import {normalizeData,denormalizeData,filterItem} from "../../utils/dataUtils";
-
-import { SimpleCard } from '../../components/Index';
 import dayjs from 'dayjs';
 import UIkit from 'uikit';
 import LocalizedFormat from 'dayjs/plugin/localizedFormat';
+import {Link} from "react-router-dom";
 
 dayjs.extend(LocalizedFormat);
 
@@ -70,70 +69,34 @@ class UserProfile extends Component {
 
       console.log("user",userCart)
       return (
-        <div className="uk-section">
-          <div className="uk-container">
-            <div className="uk-grid uk-grid-small uk-grid-match">
-              <div className="uk-width-1-4">
-                <div>
-                  <div>
-                    <img
-                      className="uk-border-circle"
-                      src={user.profile_picture}
-                    />
-                  </div>
-                  <p className="uk-text-center uk-text-lead">{user.name}</p>
-                  <p className="uk-text-center">
-                    Miembro desde el{" "}
-                    {dayjs(user.createdAt).locale("es").format("LL")}
-                  </p>
+                      //
+                    //
+            <div class="uk-card uk-card-default uk-width-1-2@m">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-auto">
+                    <img src={user.profile_picture} class="uk-border-circle" width="40" height="40" src="images/avatar.jpg"/>
                 </div>
-              </div>
-              <div className="uk-width-expand">
-                <div className="uk-padding-large uk-padding-remove-top uk-padding-remove-bottom">
-                  <ul
-                    className="uk-tab uk-child-width-expand"
-                    uk-switcher="connect:#menu"
-                  >
-                    <li>
-                      <a href="#">Mis productos</a>
-                    </li>
-                    <li>
-                      <a href="#">Mis compras</a>
-                    </li>
-                  </ul>
-  
-                  <ul
-                    id="menu"
-                    className="uk-switcher uk-margin uk-height-large"
-                    uk-overflow-auto="true"
-                  >
-                   {/* <li className="">
-                      {denormalizeData(userProducts).map((product, index) => (
-                        <SimpleCard
-                          key={index}
-                          deleteItem={this.removeProduct}
-                          {...product}
-                        />
-                      ))}
-                    </li>
-                    <li>
-                      {userCart != null ? denormalizeData(userCart).map(
-                        (cart, index) => (
-                          <SimpleCard
-                            key={index}
-                            isCart
-                            deleteItem={this.removeCart}
-                            {...cart}
-                          />
-                        )
-                      ) : null}
-                    </li>*/}
-                  </ul>
+                <div class="uk-width-expand">
+                    <h3 class="uk-card-title uk-margin-remove-bottom"> Mi perfil </h3>
+                    <p class="uk-text-meta uk-margin-remove-top">{user.name} {user.lastname} </p>
                 </div>
-              </div>
+                </div>
             </div>
-          </div>
-        </div>
+            <div class="uk-card-body">
+                <p>Miembro desde el{" "}
+                  {dayjs(user.createdAt).locale("es").format("LL")}
+                <br/>{user.phone}
+                <br/>{user.email}
+                </p>
+            </div>
+            <div class="uk-card-footer">
+                <Link class="uk-button uk-button-text" to="/store/new" >
+                Crear tienda
+                </Link>
+            </div>
+            </div>
+                
       );
     }
   }

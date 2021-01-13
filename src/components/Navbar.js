@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo_principal.png";
+import profile from "../images/login.png"
 
 const Navbar = ({ user, logout }) => {
 
@@ -17,7 +18,7 @@ const Navbar = ({ user, logout }) => {
                 </li>
                 <li className="uk-active">
                   <Link to="/About">
-                  SOBRE NOSOTROS
+                  Sobre nosotros
                   </Link>
                 </li>
                 <li>
@@ -47,7 +48,7 @@ const Navbar = ({ user, logout }) => {
                   width="40"
                   height="40"
                   alt={user.name}
-                  src={user.profile_picture}
+                  src={profile}
                   />
                 </div>
                 <div className="uk-width-expand">
@@ -63,7 +64,9 @@ const Navbar = ({ user, logout }) => {
                   </li>
                   ) : (
                     <li>
-                      <Link to="/login">Login</Link>
+                    <Link to="/login">
+                    <span uk-icon="icon: sign-in"></span>
+                    Login</Link>
                     </li>
                   )}
                 </ul>

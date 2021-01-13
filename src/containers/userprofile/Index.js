@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { deleteProduct, getProductsByUser } from '../../services/productWs';
 import { deleteCart, getUserCart } from '../../services/cartWs';
 import AppContext from '../../AppContext';
+import profile from '../../images/login.png';
 import {normalizeData,denormalizeData,filterItem} from "../../utils/dataUtils";
 import dayjs from 'dayjs';
 import UIkit from 'uikit';
@@ -71,11 +72,16 @@ class UserProfile extends Component {
       return (
                       //
                     //
-            <div className="uk-card uk-card-default uk-width-1-2@m">
+            <div className="uk-card uk-card-default uk-width-1-4@m uk-align-center">
             <div className="uk-card-header">
                 <div className="uk-grid-small uk-flex-middle" uk-grid>
                 <div className="uk-width-auto">
-                    <img src={user.profile_picture} className="uk-border-circle" width="40" height="40" src="images/avatar.jpg"/>
+                    <img  
+                    src={profile}
+                    className="uk-border-circle" 
+                    width="40" 
+                    height="40" 
+                    />
                 </div>
                 <div className="uk-width-expand">
                     <h3 className="uk-card-title uk-margin-remove-bottom"> Mi perfil </h3>

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import AppContext from '../../AppContext';
+import {StoreCard} from "../../components/index";
 import { getStoreById, createStore, updateStore } from "../../services/storeWs";
 import { buildNotification } from "../../utils/notification";
 import Form from './Form'
@@ -77,8 +78,11 @@ export default class StoreContainer extends Component {
                             handleSubmit={this.handleSubmit}
                             handleImagesChange={this.handleImageChange}
                         />
+                    <div >
+                        <StoreCard {...store} isDemo={true}/>
                     </div>
                 </div>
+            </div>
             </section>
         )
     }

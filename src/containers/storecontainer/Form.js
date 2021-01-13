@@ -1,120 +1,119 @@
 import React from 'react';
 import { InputField, TextField } from "../../components/index";
 
-
 const Form = ({ handleSubmit, handleChange, store }) => {
     return (
       <div>
         <form className="uk-width-1-1" onSubmit={handleSubmit}>
           <InputField
-            name="Nombre de tienda"
+            name="store_name"
             type="text"
             value={store.store_name}
             placeholder="Nombre de la Tienda"
             onChange={handleChange}
           />
           <TextField
-            name="Imagen de tu negocio"
+            name="store_picture"
             value={store.store_picture}
             onChange={handleChange}
             hint="solo una imagen para la tienda"
           />
           <InputField
-            name="Calle"
+            name="street"
             type="text"
             value={store.street}
-            placeholder="Calle"
+            placeholder="calle"
             onChange={handleChange}
           />
           <InputField
-            name="Número exterior"
+            name="ext_number"
             type="text"
             value={store.ext_number}
-            placeholder="Número exterior"
+            placeholder="número exterior"
             onChange={handleChange}
           />
           <InputField
-            name="Número interior"
+            name="int_number"
             type="text"
             value={store.int_number}
-            placeholder="Número interior"
+            placeholder="número interior"
             onChange={handleChange}
           />
           <InputField
-            name="Colonia"
+            name="neighborhood"
             type="text"
             value={store.neighborhood}
-            placeholder="Colonia o asentamiento"
+            placeholder="colonia o asentamiento"
             onChange={handleChange}
           />
           <InputField
-            name="Municipio"
+            name="municipality"
             type="text"
             value={store.municipality}
-            placeholder="Municipio"
+            placeholder="municipio"
             onChange={handleChange}
           />
           <InputField
-            name="Estado"
+            name="state"
             type="text"
             value={store.state}
-            placeholder="Estado"
+            placeholder="estado"
             onChange={handleChange}
           />
           <InputField
-            name="País"
+            name="country"
             type="text"
             value={store.country}
-            placeholder="País"
+            placeholder="país"
             onChange={handleChange}
           />
           <InputField
-            name="C.P."
+            name="zipcode"
             type="text"
             value={store.zipcode}
-            placeholder="Código postal"
+            placeholder="código postal"
             onChange={handleChange}
           />
           <InputField
-            name="Cuenta Clabe"
+            name="clabe"
             type="number"
             value={store.clabe}
-            placeholder="Cuenta clabe"
+            placeholder="cuenta clabe"
             onChange={handleChange}
           />
           <InputField
-            name="Banco"
+            name="bank"
             type="text"
             value={store.bank}
-            placeholder="Banco"
+            placeholder="banco"
             onChange={handleChange}
           />
           <InputField
-            name="Titular de la cuenta"
+            name="account_holder_name"
             type="text"
             value={store.account_holder_name}
             placeholder="Nombre del titular de la cuenta"
             onChange={handleChange}
           />
           <InputField
-            name="Teléfono"
+            name="phone"
             type="number"
             value={store.phone}
             placeholder="Teléfono"
             onChange={handleChange}
           />
           <InputField
-            name="Celular"
+            name="mobile"
             type="number"
             value={store.mobile}
-            placeholder="Celular"
+            placeholder="celular"
             onChange={handleChange}
           />
           <InputField
-            name="e-mail"
+            name="email"
             type="email"
             value={store.email}
-            placeholder="Correo electrónico"
+            placeholder="correo electrónico"
             onChange={handleChange}
           />
           <button type="submit" className="uk-button uk-button-primary">

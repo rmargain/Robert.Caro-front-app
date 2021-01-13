@@ -71,27 +71,27 @@ class UserProfile extends Component {
       return (
                       //
                     //
-            <div class="uk-card uk-card-default uk-width-1-2@m">
-            <div class="uk-card-header">
-                <div class="uk-grid-small uk-flex-middle" uk-grid>
-                <div class="uk-width-auto">
-                    <img src={user.profile_picture} class="uk-border-circle" width="40" height="40" src="images/avatar.jpg"/>
+            <div className="uk-card uk-card-default uk-width-1-2@m">
+            <div className="uk-card-header">
+                <div className="uk-grid-small uk-flex-middle" uk-grid>
+                <div className="uk-width-auto">
+                    <img src={user.profile_picture} className="uk-border-circle" width="40" height="40" src="images/avatar.jpg"/>
                 </div>
-                <div class="uk-width-expand">
-                    <h3 class="uk-card-title uk-margin-remove-bottom"> Mi perfil </h3>
-                    <p class="uk-text-meta uk-margin-remove-top">{user.name} {user.lastname} </p>
+                <div className="uk-width-expand">
+                    <h3 className="uk-card-title uk-margin-remove-bottom"> Mi perfil </h3>
+                    <p className="uk-text-meta uk-margin-remove-top">{user.name} {user.lastname} </p>
                 </div>
                 </div>
             </div>
-            <div class="uk-card-body">
+            <div className="uk-card-body">
                 <p>Miembro desde el{" "}
                   {dayjs(user.createdAt).locale("es").format("LL")}
                 <br/>{user.phone}
                 <br/>{user.email}
                 </p>
             </div>
-            <div class="uk-card-footer">
-                <Link class="uk-button uk-button-text" to="/store/new" >
+            <div className="uk-card-footer">
+                <Link className="uk-button uk-button-text" to="/store/new" >
                 Crear tienda
                 </Link>
             </div>

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import AppContext from "../../AppContext";
+import AppContext from "../../Contexts/AppContext";
 import { ProductCard } from "../../components/Index";
 import { getProducts } from "../../services/productWs";
 import { denormalizeData, normalizeData } from "../../utils/dataUtils";

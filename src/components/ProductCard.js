@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Slider from "./Slider";
 import { Link } from "react-router-dom";
-import AppContext from "../AppContext"
+import AppContext from "../Contexts/AppContext"
 import { buildNotification } from "../utils/notification";
 
 

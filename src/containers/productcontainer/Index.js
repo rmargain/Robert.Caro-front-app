@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import AppContext from '../../AppContext';
+import AppContext from '../../Contexts/AppContext';
 import { ProductCard } from "../../components/Index"
 import { createProduct, getProductsDetail, updateProduct } from "../../services/productWs";
 import { buildNotification } from "../../utils/notification";

@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import AppContext from "../../AppContext";
-import { ProductCard } from "../../components";
-import { getProducts, getProductsByUser } from "../../services/productWs";
+import { ProductCard } from "../../components/Index";
+import { getProducts, getProductsByUser, deleteProduct } from "../../services/productWs";
 import { denormalizeData, normalizeData } from "../../utils/dataUtils";
 
 
@@ -18,16 +18,26 @@ class StoreProfile extends Component{
                 getProductsByUser(`${user._id}`).then(res=>{
                     const {result} = res.data  
                     const products = normalizeData(result)
-                    console.log(user)
-                    console.log(user._id)
+                    console.log(history)
                     setProducts(products)
                 })
             }
         }
 
+    onDeleteProduct=(id,index)=>{
+    let {products} = this.context.state;
+    
+    deleteProduct(id).then(
+        res=>{
+            console.log("done")
+            delete products[id]
+            this.setState({products})
+        }).catch(err=>{console.log("error")})
+
+}
+
     render(){
         const {products, user} = this.context.state
-        console.log(products)
         return(
             <div className="uk-section">
                 <div className="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" 
@@ -43,7 +53,7 @@ class StoreProfile extends Component{
                 <div className="uk-container">
                 <div className="uk-grid uk-grid-small uk-grid-match uk-child-width-1-3@l  uk-child-width-1-3@m uk-child-width-1-1@s">
                     {denormalizeData(products).map((product, index) => (
-                    <ProductCard key={index} {...product} userId={user._id} />
+                    <ProductCard key={index} {...product} index={index} userId={user._id} onDelete={this.onDeleteProduct} />
                     ))}
                 </div>
                 </div>

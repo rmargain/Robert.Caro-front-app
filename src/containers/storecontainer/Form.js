@@ -1,7 +1,6 @@
 import React from 'react';
 import { InputField, TextField } from "../../components/Index";
 
-
 const Form = ({ handleSubmit, handleChange, store }) => {
     return (
       <div>

@@ -5,9 +5,10 @@ import SignupContainer from "./containers/authcontainer/SignUp";
 import HomeContainer from "./containers/homecontainer/Home";
 import ProductContainer from "./containers/productcontainer/Index";
 import UserProfile from "./containers/userprofile/Index";
-import StoreContainer from "./containers/storecontainer/index"
+import StoreContainer from "./containers/storecontainer/Index"
 import StoreProfile from "./containers/storecontainer/Profile";
 import AllProducts from "./containers/productcontainer/AllProducts"
+import CartSum from "./containers/cartcontainer/index"
 
 
 //Mis vistas --> Containers

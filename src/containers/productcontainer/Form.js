@@ -7,47 +7,59 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
     const descriptionLength =
       (product.description && product.description.length) || 0;
     return (
+    
       <div>
+      {console.log(product._id)}
         <form className="uk-width-1-1" onSubmit={handleSubmit}>
           <InputField
-            name="Nombre de producto"
+            name="title"
             type="text"
             value={product.title}
             placeholder="Nombre de producto"
             handleChange={handleChange}
           />
           <InputField
-            name="Precio"
+            name="price"
             type="number"
             value={product.price}
             placeholder="Precio"
             handleChange={handleChange}
           />
           <TextField
-            name="Descripción"
+            name="description"
             type="text"
             value={product.description}
             hint={`${descriptionLength}/50`}
             handleChange={handleChange}
           />
           <TextField
-            name="Imágenes"
+            name="images"
             value={product.images?.join(",")}
             handleChange={handleImagesChange}
             hint="Separar imágenes por comas"
           />
           <InputField
-            name="Inventario"
+            name="inventory"
             type="number"
             value={product.inventory}
             placeholder="Inventario"
             handleChange={handleChange}
           />
-          <button 
+          
+          { product._id !== undefined ? (
+            <button 
+          onClick= {handleSubmit}
+          type="submit" className="uk-button uk-button-primary">
+          Confirmar Cambios
+          </button>
+          ) : (
+             <button 
           onClick= {handleSubmit}
           type="submit" className="uk-button uk-button-primary">
           Crear producto
           </button>
+          )
+          }
         </form>
       </div>
     );

@@ -13,6 +13,16 @@ $global-medium-font-size: 1 rem !default; // 20px
 $global-xmedium-font-size: 1.0rem; // 20px
 $global-small-font-size: 0.75rem !default; //
 
+//body
+
+body {
+    background-image: url(../images/fondo.png);
+    background-size: cover;
+    height: auto;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
 //button
 .uk-button {
     padding: 0.1rem 4rem;
@@ -23,6 +33,19 @@ $global-small-font-size: 0.75rem !default; //
     text-transform: none;
     max-width: 300px;
 }
+
+.uk-button:hover {
+    color:rgb(255,206,0);
+    background-color:black;
+    text-transform: none;
+    max-width: 300px;
+}
+
+.uk-button:focus-within {
+    color: black;
+    background-color:rgb(255,206,0);
+}
+
 
 //Navbar
 

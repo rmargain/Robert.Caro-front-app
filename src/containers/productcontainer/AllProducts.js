@@ -17,6 +17,7 @@ class AllProducts extends Component{
                     const {result} = res.data  
                     const products = normalizeData(result)
                     setProducts(products)
+                    console.log(res)
                 })
             }
         }
@@ -29,7 +30,7 @@ class AllProducts extends Component{
                 <div className="uk-container">
                 <div className="uk-grid uk-grid-small uk-grid-match uk-child-width-1-3@l  uk-child-width-1-3@m uk-child-width-1-1@s">
                     {denormalizeData(products).map((product, index) => (
-                    <ProductCard key={index} {...product}/>
+                    <ProductCard key={index} {...product} index={index}/>
                     ))}
                 </div>
                 </div>

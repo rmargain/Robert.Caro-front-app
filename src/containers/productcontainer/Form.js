@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputField, TextField } from "../../components/index";
+import { InputField, TextField } from "../../components/Index";
 
 
 
@@ -7,7 +7,9 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
     const descriptionLength =
       (product.description && product.description.length) || 0;
     return (
+    
       <div>
+      {console.log(product._id)}
         <form className="uk-width-1-1" onSubmit={handleSubmit}>
           <InputField
             name="title"
@@ -43,11 +45,21 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
             placeholder="Inventario"
             handleChange={handleChange}
           />
-          <button 
+          
+          { product._id !== undefined ? (
+            <button 
+          onClick= {handleSubmit}
+          type="submit" className="uk-button uk-button-primary">
+          Confirmar Cambios
+          </button>
+          ) : (
+             <button 
           onClick= {handleSubmit}
           type="submit" className="uk-button uk-button-primary">
           Crear producto
           </button>
+          )
+          }
         </form>
       </div>
     );

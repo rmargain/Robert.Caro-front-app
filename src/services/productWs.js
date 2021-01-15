@@ -9,7 +9,7 @@ export const getProductsByUser = (id) => {
 };
 
 export const getProductsDetail = (id) => {
-  return _axios.get(`/product/${id}`);
+  return _axios.get(`/product/id/${id}`);
 };
 
 export const createProduct = (params) => {

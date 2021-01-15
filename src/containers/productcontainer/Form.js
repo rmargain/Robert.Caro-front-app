@@ -7,6 +7,7 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
     const descriptionLength =
       (product.description && product.description.length) || 0;
     return (
+    
       <div>
         <form className="uk-width-1-1" onSubmit={handleSubmit}>
           <InputField
@@ -43,11 +44,21 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
             placeholder="Inventario"
             handleChange={handleChange}
           />
-          <button 
+          
+          { product != undefined ? (
+            <button 
+          onClick= {handleSubmit}
+          type="submit" className="uk-button uk-button-primary">
+          Confirmar Cambios
+          </button>
+          ) : (
+             <button 
           onClick= {handleSubmit}
           type="submit" className="uk-button uk-button-primary">
           Crear producto
           </button>
+          )
+          }
         </form>
       </div>
     );

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import AppContext from "../../AppContext";
 import { ProductCard } from "../../components/Index";
-import { getProducts, getProductsByUser } from "../../services/productWs";
+import { getProducts, getProductsByUser, deleteProduct } from "../../services/productWs";
 import { denormalizeData, normalizeData } from "../../utils/dataUtils";
 
 
@@ -24,6 +24,18 @@ class StoreProfile extends Component{
             }
         }
 
+    onDeleteProduct=(id,index)=>{
+    let {products} = this.context.state;
+    
+    deleteProduct(id).then(
+        res=>{
+            console.log("done")
+            delete products[id]
+            this.setState({products})
+        }).catch(err=>{console.log("error")})
+
+}
+
     render(){
         const {products, user} = this.context.state
         return(
@@ -41,7 +53,7 @@ class StoreProfile extends Component{
                 <div className="uk-container">
                 <div className="uk-grid uk-grid-small uk-grid-match uk-child-width-1-3@l  uk-child-width-1-3@m uk-child-width-1-1@s">
                     {denormalizeData(products).map((product, index) => (
-                    <ProductCard key={index} {...product} userId={user._id} />
+                    <ProductCard key={index} {...product} index={index} userId={user._id} onDelete={this.onDeleteProduct} />
                     ))}
                 </div>
                 </div>

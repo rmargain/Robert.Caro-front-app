@@ -45,8 +45,9 @@ class ProductCard extends Component {
   
   
   render(){
-  const {_id, images, title, description, price, _owner, userId} = this.props
+  const {_id, images, title, description, price, _owner, userId, index, onDelete=()=>{}} = this.props
   const isOwner = userId === _owner?._id
+  console.log(isOwner)
   return (
     <div className="uk-margin-small-bottom">
        <div className="uk-card uk-card-default">
@@ -68,12 +69,23 @@ class ProductCard extends Component {
                 <p className="uk-text-meta uk-margin-remove-top">Vendedor</p>
               </div>
                 <div>
+                  {isOwner ? (
+                  <>
                   <Link
                     to={`/product/${_id}`}
                     className="uk-button uk-button-text"
                   >
                     Editar
                   </Link>
+                  <span
+                    className="uk-button uk-button-text"
+                    onClick={()=>onDelete(_id, index)}
+                  >
+                    Eliminar
+                  </span>
+                  </>
+
+                  ): null}
                 </div>
             </div>
           </div>
@@ -101,7 +113,7 @@ class ProductCard extends Component {
                 {
                     <span 
                     onClick={this.handleAdd}
-                    className="btn btn-outline-primary btn-sm">Add more</span>
+                    className="btn btn-outline-primary btn-sm"></span>
                 }
               </span> 
                 Agregar

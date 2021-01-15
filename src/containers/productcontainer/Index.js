@@ -13,7 +13,6 @@ export default class ProductContainer extends Component {
 
     state = {
         product:{},
-        stores:{}
     }
     //Ciclo de vidda
     componentDidMount(){
@@ -27,13 +26,16 @@ export default class ProductContainer extends Component {
             return false
         } 
         const {id} = this.props.match.params;
+        
         //petición backend
         if(id){
             getProductsDetail(id).then(res =>{
+                console.log(id)
                 const {result} = res.data
                 this.setState({product: result})
             })
-        }     
+        }
+        console.log(this.state.product)     
     }
     //Guadar datos
     handleChange = (e) => {
@@ -73,10 +75,17 @@ export default class ProductContainer extends Component {
 
     render(){
         const {product, user} = this.state
+        console.log(product)
         return(
             <section className="uk-section">
                 <div className="uk-container">
-                    <h3>Crear producto</h3>
+                    
+                    { product != undefined ? (
+                        <h3>Editar producto</h3>
+                        ) : (
+                         <h3>Crear producto</h3>   
+                        )
+                        }
                     <div className="uk-grid uk-child-width-1-2">
                         <Form 
                             product = {product}

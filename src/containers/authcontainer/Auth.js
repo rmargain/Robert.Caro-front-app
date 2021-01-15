@@ -8,7 +8,6 @@ export default class AuthContainer extends Component {
     state = {
       data:{}
     }
-
     // guardar movimientos
     handleChange = (event)=>{
                 // {key:value}

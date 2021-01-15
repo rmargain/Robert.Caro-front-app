@@ -14,7 +14,7 @@ const InputField = ({
     </label>
     <div className="uk-form-controls">
       <input
-        onChange={handleChange}
+        onChange= {handleChange}
         name={name}
         className="uk-input"
         id={name}

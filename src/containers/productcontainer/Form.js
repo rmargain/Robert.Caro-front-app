@@ -20,7 +20,7 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
             name="price"
             type="number"
             value={product.price}
-            placeholder="precio"
+            placeholder="Precio"
             handleChange={handleChange}
           />
           <TextField
@@ -34,13 +34,13 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
             name="images"
             value={product.images?.join(",")}
             handleChange={handleImagesChange}
-            hint="separar imágenes por comas"
+            hint="Separar imágenes por comas"
           />
           <InputField
             name="inventory"
             type="number"
             value={product.inventory}
-            placeholder="inventario"
+            placeholder="Inventario"
             handleChange={handleChange}
           />
           <button 

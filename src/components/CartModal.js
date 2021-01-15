@@ -31,7 +31,7 @@ class CartModal extends Component {
   
   
   render(){
-    console.log("Hola")
+    console.log(this.cart)
   return (
     <div >
        

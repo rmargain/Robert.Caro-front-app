@@ -40,7 +40,14 @@ const ProductCard = ({
                   >
                     Editar
                   </Link>
+                  <button
+            className="uk-button uk-button-danger"
+            uk-toggle={`target: #remove-${_id}`}
+          >
+            <span uk-icon="icon:trash"></span> Borrar
+          </button>
                 </div>
+
             </div>
           </div>
         <div className="uk-card-media-top">

@@ -2,6 +2,7 @@ import React from "react";
 import Hogar from "../images/hogar.jpg";
 import Mascotas from "../images/mascotas.jpg"
 import Deporte from "../images/deporte.jpg"
+import { Link } from "react-router-dom";
 
 const HomeSlider = () => (
 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
@@ -10,19 +11,19 @@ const HomeSlider = () => (
     <li class="uk-width-3-4">
         <div class="uk-panel">
             <img src={Mascotas} alt=""/>
-            <div class="uk-position-center uk-panel"><h1>Mascotas</h1></div>
+            <div class="uk-position-center uk-panel"><Link to="/allproducts">Mascotas</Link></div>
         </div>
     </li>
     <li class="uk-width-3-4">
         <div class="uk-panel">
             <img src={Hogar} alt=""/>
-            <div class="uk-position-center uk-panel"><h1>Hogar</h1></div>
+            <div class="uk-position-center uk-panel"><Link to="/allproducts">Hogar</Link></div>
         </div>
     </li>
     <li class="uk-width-3-4">
         <div class="uk-panel">
             <img src={ Deporte} alt=""/>
-            <div class="uk-position-center uk-panel"><h1>Deporte</h1></div>
+            <div class="uk-position-center uk-panel"><Link to="/allproducts">Deporte</Link></div>
         </div>
     </li>
 </ul>

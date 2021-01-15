@@ -97,8 +97,8 @@ class UserProfile extends Component {
                 </p>
             </div>
             <div className="uk-card-footer">
-                <Link className="uk-button uk-button-text" to="/storeprofile" >
-                Mi tienda
+                <Link className="uk-button uk-button-text" to="/store/new" >
+                Crear tienda
                 </Link>
             </div>
             </div>

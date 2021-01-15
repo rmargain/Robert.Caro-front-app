@@ -28,11 +28,11 @@ const Slider = ({ images }) => (
 
     <div className="uk-position-bottom-center uk-position-small">
       <ul className="uk-dotnav">
-        {images.map((image, index) => (
+        {images != undefined ? images.map((image, index) => (
           <li key={index} uk-slideshow-item={index}>
             <a href="#">Item 1</a>
           </li>
-        ))}
+        )) : null}
       </ul>
     </div>
   </div>

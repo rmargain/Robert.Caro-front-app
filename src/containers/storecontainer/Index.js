@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import AppContext from '../../AppContext';
-import {StoreCard} from "../../components/index";
+import {StoreCard} from "../../components/Index";
 import { getStoreById, createStore, updateStore } from "../../services/storeWs";
 import { buildNotification } from "../../utils/notification";
 import Form from './Form'

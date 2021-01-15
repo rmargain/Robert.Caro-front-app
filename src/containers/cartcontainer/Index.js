@@ -12,8 +12,8 @@ export default class ProductContainer extends Component {
     static contextType = AppContext;
 
     state = {
-        product:{},
-        stores:{}
+        products:{},
+        total:{}
     }
     //Ciclo de vidda
     componentDidMount(){
@@ -25,54 +25,18 @@ export default class ProductContainer extends Component {
         if (!Object.keys(state.user).length) {
             history.push("/login")
             return false
-        } 
-        const {id} = this.props.match.params;
-        //petición backend
-        if(id){
-            getProductsDetail(id).then(res =>{
-                const {result} = res.data
-                this.setState({product: result})
-            })
         }     
     }
     //Guadar datos
-    handleChange = (e) => {
-         let {product} = this.state;
+    handleClick = (e) => {
+         let {products} = this.state;
          product = {...product, [e.target.name]:e.target.value};
          this.setState({product})
     }
-    handleImageChange=(e)=>{
-        let {product} = this.state;
-        product = {...product, [e.target.name]:e.target.value.split(",") };
-        this.setState({product})
-    }
-
-    handleSubmit = (e)=>{
-        e.preventDefault();
-        const {product} = this.state;
-        const {addProduct} = this.context;
-        const {history} = this.props
-        const {id } = this.props.match.params;
-        const action = id ? updateProduct : createProduct //ws
-        const params = id ? {product, id} : { product } 
-
-        action(params)
-        .then((res)=>{
-            const {result} = res.data
-            addProduct(result);
-            history.push("/")
-        })
-        .catch(error=>{
-            //almacenamiento de errores y mensajes
-            //const errors = Object.values(error.response.data.error)
-            //errors.map((error) => buildNotification(error,"danger","close"))
-            buildNotification("No tienes permisos para editar este producto", "error")
-            console.log ("error",error.response)
-        })
-    }
+    
 
     render(){
-        const {product, user} = this.state
+        const {product} = this.state
         return(
             <section className="uk-section">
                 <div className="uk-container">
@@ -85,7 +49,7 @@ export default class ProductContainer extends Component {
                             handleImagesChange={this.handleImageChange}
                         />
                         <div>
-                            <ProductCard {...product} />
+                            <ProductCard {...product} isDemo={true} />
                         </div>
                     </div>
                 </div>

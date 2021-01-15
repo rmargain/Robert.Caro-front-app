@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AppContext from "../AppContext"
+import AppContext from "../Contexts/AppContext"
 import { buildNotification } from "../utils/notification";
 
 

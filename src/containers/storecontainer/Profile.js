@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import AppContext from "../../AppContext";
+import AppContext from "../../Contexts/AppContext";
 import { ProductCard } from "../../components/Index";
 import { getProducts, getProductsByUser, deleteProduct } from "../../services/productWs";
 import { denormalizeData, normalizeData } from "../../utils/dataUtils";

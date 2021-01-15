@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { deleteProduct, getProductsByUser } from '../../services/productWs';
 import { deleteCart, getUserCart } from '../../services/cartWs';
-import AppContext from '../../AppContext';
+import AppContext from '../../Contexts/AppContext';
 import profile from '../../images/login.png';
 import {normalizeData,denormalizeData,filterItem} from "../../utils/dataUtils";
 import dayjs from 'dayjs';

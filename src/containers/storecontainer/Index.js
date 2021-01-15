@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import AppContext from '../../AppContext';
+import AppContext from '../../Contexts/AppContext';
 import {StoreCard} from "../../components/Index";
 import { getStoreById, createStore, updateStore } from "../../services/storeWs";
 import { buildNotification } from "../../utils/notification";

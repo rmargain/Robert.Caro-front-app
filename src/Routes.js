@@ -8,7 +8,6 @@ import UserProfile from "./containers/userprofile/Index";
 import StoreContainer from "./containers/storecontainer/Index"
 import StoreProfile from "./containers/storecontainer/Profile";
 import AllProducts from "./containers/productcontainer/AllProducts"
-import CartSum from "./containers/cartcontainer/index"
 
 
 //Mis vistas --> Containers

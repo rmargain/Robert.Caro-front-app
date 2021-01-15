@@ -9,6 +9,7 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
     return (
     
       <div>
+      {console.log(product._id)}
         <form className="uk-width-1-1" onSubmit={handleSubmit}>
           <InputField
             name="title"
@@ -45,7 +46,7 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
             handleChange={handleChange}
           />
           
-          { product != undefined ? (
+          { product._id !== undefined ? (
             <button 
           onClick= {handleSubmit}
           type="submit" className="uk-button uk-button-primary">

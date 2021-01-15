@@ -80,7 +80,7 @@ export default class ProductContainer extends Component {
             <section className="uk-section">
                 <div className="uk-container">
                     
-                    { product != undefined ? (
+                    { product._id !== undefined ? (
                         <h3>Editar producto</h3>
                         ) : (
                          <h3>Crear producto</h3>   

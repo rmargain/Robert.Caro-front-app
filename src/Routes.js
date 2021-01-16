@@ -7,7 +7,8 @@ import ProductContainer from "./containers/productcontainer/Index";
 import UserProfile from "./containers/userprofile/Index";
 import StoreContainer from "./containers/storecontainer/Index"
 import StoreProfile from "./containers/storecontainer/Profile";
-import AllProducts from "./containers/productcontainer/AllProducts"
+import AllProducts from "./containers/productcontainer/AllProducts";
+import AboutContainer from "./containers/aboutcontainer/About"
 
 
 
@@ -16,6 +17,7 @@ const Routes = () => (
     <Switch>
         {/* https://www.carober.com/  */}
         <Route exact path="/" component ={HomeContainer}/>
+        <Route exact path="/About" component ={ AboutContainer}/>
         <Route exact path="/login" component={AuthContainer} />
         <Route exact path="/signup"  component={SignupContainer}/>
         <Route exact path="/product/new"  component={ProductContainer}   />

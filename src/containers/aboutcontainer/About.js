@@ -5,28 +5,27 @@ export default class About extends Component{
     render(){
         return(
             <section>
-            <div className="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-            <div className="uk-card-media-left uk-cover-container">
-                <img src= {store}/>
+            <div class="uk-child-width-1-2@m" uk-grid>
+            <div>
+            <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+                <img src="images/light.jpg" alt=""/>
+            </div>
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Media Top</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+            </div>
             </div>
             <div>
-                <div className="uk-card-body uk-align-left">
-                    <h3 className="uk-card-title ">Media Left</h3>
-                    <p>Somos alumnos de Ironhack buscando dar una solución a los pequeños comercios
-                    en tiempos difíciles como los que estamos viviendo.</p>
-                </div>
+            <div class="uk-card uk-card-default uk-align-right">
+            <div class="uk-card-body">
+                <h3 class="uk-card-title">Media Bottom</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
             </div>
+            <div class="uk-card-media-bottom">
+                <img src="images/light.jpg" alt=""/>
             </div>
-
-            <div className="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-            <div className="uk-flex-last@s uk-card-media-right uk-cover-container">
-            <img src="images/light.jpg" alt="" uk-cover/>
-            <canvas width="600" height="400"></canvas>
-            </div>
-            <div>
-            <div className="uk-card-body">
-            <h3 className="uk-card-title">Media Right</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
             </div>
             </div>
             </div>

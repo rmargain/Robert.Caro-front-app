@@ -98,7 +98,7 @@ class UserProfile extends Component {
             </div>
             <div className="uk-card-footer">
                 { user.store !== undefined ? (
-                  <Link className="uk-button uk-button-text" to="/storeprofile" >
+                  <Link className="uk-button uk-button-text" to="/store/profile" >
                   Mi tienda
                   </Link> 
                 ) : (

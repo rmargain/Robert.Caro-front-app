@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const StoreCard = ({
+const StoreCardAllStores = ({
   _id,
   store_name,
   store_picture,
@@ -7,8 +7,8 @@ const StoreCard = ({
   _owner,
 }) => {
   return (
-    <div className="uk-margin-small-bottom">
-    <Link to={`/store/products/${_owner}`}>
+    <div className="uk-margin-small-bottom" owner={_owner._id}>
+    <Link to={`/store/products/${_owner._id}`} owner={_owner._id}>
       <div className="uk-card uk-card-default">
           <div className="uk-card-header uk-padding-small">
             <div className="uk-grid-small uk-flex-middle" uk-grid="true">
@@ -35,4 +35,4 @@ const StoreCard = ({
     </div>
   );
 };
-export default StoreCard;
+export default StoreCardAllStores;

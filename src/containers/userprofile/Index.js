@@ -97,17 +97,16 @@ class UserProfile extends Component {
                 </p>
             </div>
             <div className="uk-card-footer">
-                
                 { user.store !== undefined ? (
-                          <Link className="uk-button uk-button-text" to="/storeprofile" >
-                          Mi tienda
-                          </Link> 
-                        ) : (
-                          <Link className="uk-button uk-button-text" to="/store/new" >
-                          Crear tienda
-                          </Link>   
-                        )
-                        }
+                  <Link className="uk-button uk-button-text" to="/storeprofile" >
+                  Mi tienda
+                  </Link> 
+                ) : (
+                  <Link className="uk-button uk-button-text" to="/store/new" >
+                  Crear tienda
+                  </Link>   
+                )
+                }
             </div>
             </div>
                 

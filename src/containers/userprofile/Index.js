@@ -66,7 +66,7 @@ class UserProfile extends Component {
     };
   
     render() {
-      const { user, userProducts, userCart } = this.context.state;
+      const { user, store, userProducts, userCart } = this.context.state;
 
       console.log("user",userCart)
       return (
@@ -100,6 +100,10 @@ class UserProfile extends Component {
                 <Link className="uk-button uk-button-text" to="/store/new" >
                 Crear tienda
                 </Link>
+                { store._id !== undefined ? (
+                        <Link className="uk-button uk-button-text" to="/storeprofile">Mi tienda</Link>
+                        ) 
+                        }
             </div>
             </div>
                 

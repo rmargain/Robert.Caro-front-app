@@ -88,12 +88,12 @@ class ProductCard extends Component {
         </div>
         <div className="uk-card-body uk-padding-small">
           <h3 className="uk-card-title uk-text-center">
-            <Link
+            <span
               to={`/product/${_id}`}
               className="uk-button uk-button-text uk-text-lead"
             >
               {title}
-            </Link>
+            </span>
           </h3>
           <div>Precio: {price}</div>
           <p className="uk-text-break">{description}</p>

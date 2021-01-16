@@ -8,17 +8,32 @@ import dayjs from 'dayjs';
 import UIkit from 'uikit';
 import LocalizedFormat from 'dayjs/plugin/localizedFormat';
 import {Link} from "react-router-dom";
+import getStoresByUser from "../../services/storeWs"
 
 dayjs.extend(LocalizedFormat);
 
 class UserProfile extends Component {
     static contextType = AppContext;
+
+    state = {
+      store:{},
+    }
+
     componentWillMount() {
       const {
         user: { _id },
         userProducts,
       } = this.context.state;
 
+    getStoresByUser().then((res)=>{
+      const{result} = res.data
+      this.setState ({
+        store : result
+      }
+      )
+    }).catch((error) =>{
+      console.log ("error",error.response)
+    })
 
       const {history} = this.props
         if(_id === null || _id === undefined){
@@ -67,7 +82,7 @@ class UserProfile extends Component {
   
     render() {
       const { user, userProducts, userCart } = this.context.state;
-
+      const {store} = this.state
       console.log("user",userCart)
       return (
                       //
@@ -97,7 +112,7 @@ class UserProfile extends Component {
                 </p>
             </div>
             <div className="uk-card-footer">
-                { user.store !== undefined ? (
+                { store !== undefined ? (
                   <Link className="uk-button uk-button-text" to="/store/profile" >
                   Mi tienda
                   </Link> 

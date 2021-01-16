@@ -13,8 +13,9 @@ const Form = ({ handleSubmit, handleChange, store }) => {
             placeholder="Nombre de la tienda"
             onChange={handleChange}
           />
-          <TextField
+          <InputField
             name="store_picture"
+            type='text'
             value={store.store_picture}
             nombre="Imagen de la tienda"
             onChange={handleChange}

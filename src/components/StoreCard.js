@@ -23,7 +23,7 @@ const StoreCard = ({
             </div>
             <div className="uk-card-body uk-padding-small">
             <div className="uk-width-auto">
-            <img src={store_picture} />
+            <img src={store_picture} alt={store_name}/>
             </div>
             <div> 
             </div>

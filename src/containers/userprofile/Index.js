@@ -66,7 +66,7 @@ class UserProfile extends Component {
     };
   
     render() {
-      const { user, store, userProducts, userCart } = this.context.state;
+      const { user, userProducts, userCart } = this.context.state;
 
       console.log("user",userCart)
       return (
@@ -97,12 +97,16 @@ class UserProfile extends Component {
                 </p>
             </div>
             <div className="uk-card-footer">
-                <Link className="uk-button uk-button-text" to="/store/new" >
-                Crear tienda
-                </Link>
-                { store._id !== undefined ? (
-                        <Link className="uk-button uk-button-text" to="/storeprofile">Mi tienda</Link>
-                        ) 
+                
+                { user.store !== undefined ? (
+                          <Link className="uk-button uk-button-text" to="/storeprofile" >
+                          Mi tienda
+                          </Link> 
+                        ) : (
+                          <Link className="uk-button uk-button-text" to="/store/new" >
+                          Crear tienda
+                          </Link>   
+                        )
                         }
             </div>
             </div>

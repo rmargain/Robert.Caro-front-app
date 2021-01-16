@@ -1,12 +1,14 @@
 import React from "react";
 
-const InputField = ({
+
+
+const SearchField = ({
   name,
   type,
   nombre,
   handleChange,
   placeholder,
-  value,
+  value = "",
   ...props
 }) => (
   <div className="uk-margin">
@@ -28,4 +30,4 @@ const InputField = ({
   </div>
 );
 
-export default InputField;
+export default SearchField;

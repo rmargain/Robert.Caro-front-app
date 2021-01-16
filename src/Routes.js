@@ -8,6 +8,7 @@ import UserProfile from "./containers/userprofile/Index";
 import StoreContainer from "./containers/storecontainer/Index"
 import StoreProfile from "./containers/storecontainer/Profile";
 import AllProducts from "./containers/productcontainer/AllProducts"
+import AllStores from "./containers/storecontainer/AllStores";
 
 
 //Mis vistas --> Containers
@@ -24,6 +25,7 @@ const Routes = () => (
         <Route exact path='/store/profile' component={StoreProfile}/>
         <Route exact path='/product/delete' component={ProductContainer}/>
         <Route exact path='/allproducts' component={AllProducts}/>
+        <Route exact path='/allstores' component={AllStores}/>
     </Switch>
 );
 

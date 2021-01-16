@@ -13,6 +13,7 @@ export default class ProductContainer extends Component {
 
     state = {
         product:{},
+        user:{}
     }
     //Ciclo de vidda
     componentDidMount(){
@@ -56,7 +57,7 @@ export default class ProductContainer extends Component {
         const {history} = this.props
         const {id } = this.props.match.params;
         const action = id ? updateProduct : createProduct //ws
-        const params = id ? {product, id} : { product } 
+        const params = id ? {product, id} : { product} 
 
         action(params)
         .then((res)=>{
@@ -74,7 +75,7 @@ export default class ProductContainer extends Component {
     }
 
     render(){
-        const {product, user} = this.state
+        const {product} = this.state
         console.log(product)
         return(
             <section className="uk-section">

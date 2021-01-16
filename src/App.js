@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import AppContext from './Contexts/AppContext.js';
+import AppContext from './Contexts/AppContext';
 import Navbar from './components/Navbar';
 import Routes from './Routes';
 import { logout } from './services/userWs';

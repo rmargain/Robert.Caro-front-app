@@ -2,17 +2,20 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import AppContext from "../../Contexts/AppContext";
 import { ProductCard } from "../../components/Index";
-import { getProducts, getProductsByUser, deleteProduct } from "../../services/productWs";
+import { getProductsByUser, deleteProduct } from "../../services/productWs";
 import { denormalizeData, normalizeData } from "../../utils/dataUtils";
-import store from "../../images/store.jpg"
 
 
 class StoreProfile extends Component{
     static contextType = AppContext;
 
+    state ={
+        products: {}
+    }
+
     componentDidMount(){
-        const {products,user} = this.context.state;
-        const {setProducts} = this.context;
+        const {user} = this.context.state;
+        const {products} = this.state
         const {history} = this.props;
         
             if(denormalizeData(products).length < 1){
@@ -20,7 +23,8 @@ class StoreProfile extends Component{
                     const {result} = res.data  
                     const products = normalizeData(result)
                     console.log(history)
-                    setProducts(products)
+                    console.log(result)
+                    this.setState({products})
                 })
             }
         }
@@ -38,7 +42,8 @@ class StoreProfile extends Component{
 }
 
     render(){
-        const {products, user} = this.context.state
+        const {user} = this.context.state
+        const {products} = this.state
         return(
             <div> 
             <div className="uk-card uk-card-default uk-card-body uk-margin-small">

@@ -8,7 +8,7 @@ import dayjs from 'dayjs';
 import UIkit from 'uikit';
 import LocalizedFormat from 'dayjs/plugin/localizedFormat';
 import {Link} from "react-router-dom";
-import getStoresByUser from "../../services/storeWs"
+import {getStoresByUser} from "../../services/storeWs"
 
 dayjs.extend(LocalizedFormat);
 

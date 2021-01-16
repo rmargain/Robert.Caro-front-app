@@ -31,7 +31,7 @@ body {
     color: black;
     background-color:rgb(255,206,0);
     text-transform: none;
-    max-width: 300px;
+    max-width: 100;
 }
 
 .uk-button:hover {
@@ -62,9 +62,9 @@ body {
 //Card
 .uk-card {
     border-radius: 20px;
-    overflow: hidden;
     font-family: "Poppins";
     font-size: $global-small-font-size;
+    padding-bottom: 200;
 }
 
 //Generales

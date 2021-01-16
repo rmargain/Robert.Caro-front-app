@@ -5,7 +5,8 @@ import AppContext from "../Contexts/AppContext"
 import { buildNotification } from "../utils/notification";
 
 class ProductCard extends Component {
-    static contextType = AppContext;
+    static contextType = AppContext;  
+
       handleAdd = (e)=>{
         e.preventDefault();
         const {_id, images, title, description, price, _owner, userId} = this.props
@@ -40,9 +41,9 @@ class ProductCard extends Component {
   
   
   render(){
-  const {_id, images, title, description, price, _owner, userId, index, onDelete=()=>{}} = this.props
+  const {_id, images, title, description, price, _owner, userId, index, _store, onDelete=()=>{}} = this.props
   const isOwner = userId === _owner?._id
-  console.log(isOwner)
+  console.log(this.props)
   return (
     <div className="uk-margin-small-bottom">
        <div className="uk-card uk-card-default">
@@ -54,14 +55,13 @@ class ProductCard extends Component {
                   width="40"
                   height="40"
                   alt={_owner?.name}
-                  src={_owner?.profile_picture}
+                  src={_store?.store_picture}
                 />
               </div>
               <div className="uk-width-expand">
                 <h3 className="uk-card-title uk-margin-remove-bottom">
-                  {_owner?.name}
+                  {_store?.store_name}
                 </h3>
-                <p className="uk-text-meta uk-margin-remove-top">Vendedor</p>
               </div>
                 <div>
                   {isOwner ? (

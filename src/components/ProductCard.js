@@ -59,25 +59,26 @@ class ProductCard extends Component {
                 />
               </div>
               <div className="uk-width-expand">
-                <h3 className="uk-card-title uk-margin-remove-bottom">
-                  {_store?.store_name}
-                </h3>
+                <p className="uk-margin-remove-top"></p>
+                <p className="uk-title">
+                </p>
               </div>
                 <div>
                   {isOwner ? (
                   <>
                   <Link
+                    uk-icon="pencil"
                     to={`/product/${_id}`}
-                    className="uk-button uk-button-text"
                   >
                     Editar
                   </Link>
-                  <span
-                    className="uk-button uk-button-text"
+                  
+                  <Link
+                    uk-icon="trash"
                     onClick={()=>onDelete(_id, index)}
                   >
                     Eliminar
-                  </span>
+                  </Link>
                   </>
                   ): null}
                 </div>
@@ -89,14 +90,13 @@ class ProductCard extends Component {
         <div className="uk-card-body uk-padding-small">
           <h3 className="uk-card-title uk-text-center">
             <span
-              to={`/product/${_id}`}
-              className="uk-button uk-button-text uk-text-lead"
-            >
+              className="uk-text-lead">
               {title}
             </span>
           </h3>
           <div>Precio: {price}</div>
           <p className="uk-text-break">{description}</p>
+          <p className="uk-text-break">Vendedor:{_owner?.name}</p>
           <div className="uk-text-center">
             {!isOwner ? (
               <Link

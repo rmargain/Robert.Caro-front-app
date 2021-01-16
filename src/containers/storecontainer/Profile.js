@@ -4,6 +4,7 @@ import AppContext from "../../AppContext";
 import { ProductCard } from "../../components/Index";
 import { getProducts, getProductsByUser, deleteProduct } from "../../services/productWs";
 import { denormalizeData, normalizeData } from "../../utils/dataUtils";
+import store from "../../images/store.jpg"
 
 
 class StoreProfile extends Component{
@@ -40,15 +41,20 @@ class StoreProfile extends Component{
         const {products, user} = this.context.state
         return(
             <div className="uk-section">
-                <div className="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" 
-                style={{
-                    backgroundImage:"url('https://www.construyehogar.com/wp-content/uploads/2016/10/Hermosa-casa-de-%C3%A1rbol.jpg')"
-                }}
-                >
-                    <div className="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                        <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">IronrbnB</h1>
-                        <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">App demo para frontent modulo 2</p>
-                    </div>
+                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div class="uk-card-media-left uk-cover-container">
+                <img src={store} alt="" uk-cover/>
+                <canvas width="600" height="400"></canvas>
+                </div>
+                <div>
+                <div class="uk-card-body">
+                <h3 class="uk-card-title">Mi tienda</h3>
+                <p>Crea, edita y sube tus productos con facilidad.</p>
+                <Link className="uk-text-primary" to="/product/new" >
+                                    Crear producto
+                </Link>
+                </div>
+                </div>
                 </div>
                 <div className="uk-container">
                 <div className="uk-grid uk-grid-small uk-grid-match uk-child-width-1-3@l  uk-child-width-1-3@m uk-child-width-1-1@s">

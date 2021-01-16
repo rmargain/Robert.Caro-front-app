@@ -63,13 +63,13 @@ export default class ProductContainer extends Component {
         .then((res)=>{
             const {result} = res.data
             addProduct(result);
-            history.push("/")
+            history.push("/store/profile")
         })
         .catch(error=>{
             //almacenamiento de errores y mensajes
             //const errors = Object.values(error.response.data.error)
             //errors.map((error) => buildNotification(error,"danger","close"))
-            buildNotification("No tienes permisos para editar este producto", "error")
+            buildNotification("Revisa los campos y asegurate de tener una tienda creada", "error")
             console.log ("error",error.response)
         })
     }

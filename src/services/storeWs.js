@@ -5,7 +5,7 @@ export const getStores = () => {
  };
 
 export const getStoresByUser = () => {
-  return _axios.get(`/store/user/`);
+  return _axios.get(`/store/user`);
 };
 
 export const getStoreById = (id) => {

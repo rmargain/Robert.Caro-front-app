@@ -22,7 +22,6 @@ class UserProfile extends Component {
     componentWillMount() {
       const {
         user: { _id },
-        userProducts,
       } = this.context.state;
 
     getStoresByUser().then((res)=>{
@@ -40,20 +39,7 @@ class UserProfile extends Component {
             history.push("/login")
             return false
         }
-      /*if (denormalizeData(userProducts).length < 1) {
-        const { setUserProducts, setUserCart } = this.context;
-        getProductsByUser(_id).then((res) => {
-          const { result } = res.data;
-          const products = normalizeData(result);
-          setUserProducts(products);
-        });
-        getUserCart().then((res) => {
-            console.log("res",res)
-          const { result } = res.data;
-          const cart = normalizeData(result);
-          setUserCart(cart);
-        });
-      }*/
+
     }
   
     removeProduct = (id) => {
@@ -84,6 +70,7 @@ class UserProfile extends Component {
       const { user, userProducts, userCart } = this.context.state;
       const {store} = this.state
       console.log("user",userCart)
+      console.log(store)
       return (
                       //
                     //
@@ -112,14 +99,14 @@ class UserProfile extends Component {
                 </p>
             </div>
             <div className="uk-card-footer">
-                { store !== undefined ? (
-                  <Link className="uk-button uk-button-text" to="/store/profile" >
-                  Mi tienda
-                  </Link> 
-                ) : (
+                { store.length === 0 ? (
                   <Link className="uk-button uk-button-text" to="/store/new" >
                   Crear tienda
-                  </Link>   
+                  </Link> 
+                ) : (
+                  <Link className="uk-button uk-button-text" to="/store/profile" >
+                  Mi tienda
+                  </Link>
                 )
                 }
             </div>

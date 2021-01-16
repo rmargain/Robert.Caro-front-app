@@ -24,6 +24,11 @@ class AllStores extends Component{
                 })
             }
         }
+    
+    // handleClick = (e) =>{
+    //     e.preventDefault();
+    //     const
+    // }    
 
     render(){
         const {stores} = this.state

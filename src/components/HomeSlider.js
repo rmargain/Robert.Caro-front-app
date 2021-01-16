@@ -3,7 +3,6 @@ import Hogar from "../images/hogar.jpg";
 import Mascotas from "../images/mascotas.jpg"
 import Deporte from "../images/deporte.jpg"
 import {Link} from 'react-router-dom'
-
 const HomeSlider = () => (
 <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" uk-slider="center: true">
 
@@ -45,9 +44,6 @@ uk-slider-item="previous"
 href="#" 
 uk-slidenav-next = "true"
 uk-slider-item="next"></a>
-
 </div>
-
 );
-
 export default HomeSlider;

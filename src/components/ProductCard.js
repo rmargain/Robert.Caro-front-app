@@ -4,11 +4,8 @@ import { Link } from "react-router-dom";
 import AppContext from "../Contexts/AppContext"
 import { buildNotification } from "../utils/notification";
 
-
-
 class ProductCard extends Component {
     static contextType = AppContext;
-
       handleAdd = (e)=>{
         e.preventDefault();
         const {_id, images, title, description, price, _owner, userId} = this.props
@@ -31,8 +28,6 @@ class ProductCard extends Component {
           })
         } else buildNotification("El producto ya està en el carrito", "error")
       }
-
-
 // function ProductCard  ({
 //    _id,
 //    images = [],
@@ -84,7 +79,6 @@ class ProductCard extends Component {
                     Eliminar
                   </span>
                   </>
-
                   ): null}
                 </div>
             </div>
@@ -94,12 +88,12 @@ class ProductCard extends Component {
         </div>
         <div className="uk-card-body uk-padding-small">
           <h3 className="uk-card-title uk-text-center">
-            <Link
+            <span
               to={`/product/${_id}`}
               className="uk-button uk-button-text uk-text-lead"
             >
               {title}
-            </Link>
+            </span>
           </h3>
           <div>Precio: {price}</div>
           <p className="uk-text-break">{description}</p>

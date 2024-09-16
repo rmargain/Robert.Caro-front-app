@@ -14,6 +14,7 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
           <InputField
             name="title"
             type="text"
+            nombre="Título del Producto"
             value={product.title}
             placeholder="Nombre de producto"
             handleChange={handleChange}
@@ -21,6 +22,7 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
           <InputField
             name="price"
             type="number"
+            nombre="Precio"
             value={product.price}
             placeholder="Precio"
             handleChange={handleChange}
@@ -28,6 +30,7 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
           <TextField
             name="description"
             type="text"
+            nombre="Descripción"
             value={product.description}
             hint={`${descriptionLength}/50`}
             handleChange={handleChange}
@@ -35,12 +38,14 @@ const Form = ({ handleSubmit, handleChange, handleImagesChange, product }) => {
           <TextField
             name="images"
             value={product.images?.join(",")}
+            nombre="Imágenes"
             handleChange={handleImagesChange}
             hint="Separar imágenes por comas"
           />
           <InputField
             name="inventory"
             type="number"
+            nombre="Inventario"
             value={product.inventory}
             placeholder="Inventario"
             handleChange={handleChange}

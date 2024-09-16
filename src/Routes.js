@@ -8,6 +8,9 @@ import UserProfile from "./containers/userprofile/Index";
 import StoreContainer from "./containers/storecontainer/Index"
 import StoreProfile from "./containers/storecontainer/Profile";
 import AllProducts from "./containers/productcontainer/AllProducts"
+import AllStores from "./containers/storecontainer/AllStores";
+import AboutContainer from "./containers/aboutcontainer/About"
+import StoreProducts from "./containers/productcontainer/ProductsStore";
 
 
 //Mis vistas --> Containers
@@ -15,6 +18,7 @@ const Routes = () => (
     <Switch>
         {/* https://www.carober.com/  */}
         <Route exact path="/" component ={HomeContainer}/>
+        <Route exact path="/About" component ={AboutContainer}/>
         <Route exact path="/login" component={AuthContainer} />
         <Route exact path="/signup"  component={SignupContainer}/>
         <Route exact path="/product/new"  component={ProductContainer}   />
@@ -24,6 +28,8 @@ const Routes = () => (
         <Route exact path='/store/profile' component={StoreProfile}/>
         <Route exact path='/product/delete' component={ProductContainer}/>
         <Route exact path='/allproducts' component={AllProducts}/>
+        <Route exact path='/allstores' component={AllStores}/>
+        <Route exact path='/store/products/:id' component={StoreProducts} />
     </Switch>
 );
 

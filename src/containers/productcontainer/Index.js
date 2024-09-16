@@ -13,6 +13,7 @@ export default class ProductContainer extends Component {
 
     state = {
         product:{},
+        user:{}
     }
     //Ciclo de vidda
     componentDidMount(){
@@ -56,25 +57,25 @@ export default class ProductContainer extends Component {
         const {history} = this.props
         const {id } = this.props.match.params;
         const action = id ? updateProduct : createProduct //ws
-        const params = id ? {product, id} : { product } 
+        const params = id ? {product, id} : { product} 
 
         action(params)
         .then((res)=>{
             const {result} = res.data
             addProduct(result);
-            history.push("/")
+            history.push("/store/profile")
         })
         .catch(error=>{
             //almacenamiento de errores y mensajes
             //const errors = Object.values(error.response.data.error)
             //errors.map((error) => buildNotification(error,"danger","close"))
-            buildNotification("No tienes permisos para editar este producto", "error")
+            buildNotification("Revisa los campos y asegurate de tener una tienda creada", "error")
             console.log ("error",error.response)
         })
     }
 
     render(){
-        const {product, user} = this.state
+        const {product} = this.state
         console.log(product)
         return(
             <section className="uk-section">

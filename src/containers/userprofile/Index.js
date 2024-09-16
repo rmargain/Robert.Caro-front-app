@@ -8,37 +8,38 @@ import dayjs from 'dayjs';
 import UIkit from 'uikit';
 import LocalizedFormat from 'dayjs/plugin/localizedFormat';
 import {Link} from "react-router-dom";
+import {getStoresByUser} from "../../services/storeWs"
 
 dayjs.extend(LocalizedFormat);
 
 class UserProfile extends Component {
     static contextType = AppContext;
+
+    state = {
+      store:{},
+    }
+
     componentWillMount() {
       const {
         user: { _id },
-        userProducts,
       } = this.context.state;
 
+    getStoresByUser().then((res)=>{
+      const{result} = res.data
+      this.setState ({
+        store : result
+      }
+      )
+    }).catch((error) =>{
+      console.log ("error",error.response)
+    })
 
       const {history} = this.props
         if(_id === null || _id === undefined){
             history.push("/login")
             return false
         }
-      /*if (denormalizeData(userProducts).length < 1) {
-        const { setUserProducts, setUserCart } = this.context;
-        getProductsByUser(_id).then((res) => {
-          const { result } = res.data;
-          const products = normalizeData(result);
-          setUserProducts(products);
-        });
-        getUserCart().then((res) => {
-            console.log("res",res)
-          const { result } = res.data;
-          const cart = normalizeData(result);
-          setUserCart(cart);
-        });
-      }*/
+
     }
   
     removeProduct = (id) => {
@@ -67,8 +68,9 @@ class UserProfile extends Component {
   
     render() {
       const { user, userProducts, userCart } = this.context.state;
-
+      const {store} = this.state
       console.log("user",userCart)
+      console.log(store)
       return (
                       //
                     //
@@ -97,9 +99,16 @@ class UserProfile extends Component {
                 </p>
             </div>
             <div className="uk-card-footer">
-                <Link className="uk-button uk-button-text" to="/store/new" >
-                Crear tienda
-                </Link>
+                { store.length === 0 ? (
+                  <Link className="uk-button uk-button-text" to="/store/new" >
+                  Crear tienda
+                  </Link> 
+                ) : (
+                  <Link className="uk-button uk-button-text" to="/store/profile" >
+                  Mi tienda
+                  </Link>
+                )
+                }
             </div>
             </div>
                 

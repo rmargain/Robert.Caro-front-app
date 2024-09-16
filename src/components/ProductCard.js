@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 import AppContext from "../Contexts/AppContext"
 import { buildNotification } from "../utils/notification";
 
-
-
 class ProductCard extends Component {
-    static contextType = AppContext;
+    static contextType = AppContext;  
 
       handleAdd = (e)=>{
         e.preventDefault();
@@ -31,8 +29,6 @@ class ProductCard extends Component {
           })
         } else buildNotification("El producto ya està en el carrito", "error")
       }
-
-
 // function ProductCard  ({
 //    _id,
 //    images = [],
@@ -45,9 +41,9 @@ class ProductCard extends Component {
   
   
   render(){
-  const {_id, images, title, description, price, _owner, userId, index, onDelete=()=>{}} = this.props
+  const {_id, images, title, description, price, _owner, userId, index, _store, onDelete=()=>{}} = this.props
   const isOwner = userId === _owner?._id
-  console.log(isOwner)
+  console.log(this.props)
   return (
     <div className="uk-margin-small-bottom">
        <div className="uk-card uk-card-default">
@@ -59,32 +55,31 @@ class ProductCard extends Component {
                   width="40"
                   height="40"
                   alt={_owner?.name}
-                  src={_owner?.profile_picture}
+                  src={_store?.store_picture}
                 />
               </div>
               <div className="uk-width-expand">
-                <h3 className="uk-card-title uk-margin-remove-bottom">
-                  {_owner?.name}
-                </h3>
-                <p className="uk-text-meta uk-margin-remove-top">Vendedor</p>
+                <p className="uk-margin-remove-top"></p>
+                <p className="uk-title">
+                </p>
               </div>
                 <div>
                   {isOwner ? (
                   <>
                   <Link
+                    uk-icon="pencil"
                     to={`/product/${_id}`}
-                    className="uk-button uk-button-text"
                   >
                     Editar
                   </Link>
-                  <span
-                    className="uk-button uk-button-text"
+                  
+                  <Link
+                    uk-icon="trash"
                     onClick={()=>onDelete(_id, index)}
                   >
                     Eliminar
-                  </span>
+                  </Link>
                   </>
-
                   ): null}
                 </div>
             </div>
@@ -94,15 +89,14 @@ class ProductCard extends Component {
         </div>
         <div className="uk-card-body uk-padding-small">
           <h3 className="uk-card-title uk-text-center">
-            <Link
-              to={`/product/${_id}`}
-              className="uk-button uk-button-text uk-text-lead"
-            >
+            <span
+              className="uk-text-lead">
               {title}
-            </Link>
+            </span>
           </h3>
           <div>Precio: {price}</div>
           <p className="uk-text-break">{description}</p>
+          <p className="uk-text-break">Vendedor:{_owner?.name}</p>
           <div className="uk-text-center">
             {!isOwner ? (
               <Link
